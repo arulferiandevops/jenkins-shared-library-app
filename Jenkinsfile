@@ -3,6 +3,13 @@
 pipeline {
     agent any
     stages {
+        stage("maven") {
+            steps {
+                script {
+                    maven("clean compile")
+                }
+            }
+        }
         stage("hello") {
             steps {
                 script {
