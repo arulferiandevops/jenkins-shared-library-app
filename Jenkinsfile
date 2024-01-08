@@ -14,6 +14,7 @@ pipeline {
             steps {
                 script {
                     echo(author.name())
+                    echo(author())
                     echo(author.channel())
                 }
             }
