@@ -3,10 +3,10 @@
 pipeline {
     agent any
     stages {
-        stage("maven") {
+        stage("maven compile") {
             steps {
                 script {
-                    maven("clean compile")
+                    maven(["clean","compile","test"])
                 }
             }
         }
