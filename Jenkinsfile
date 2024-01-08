@@ -10,6 +10,14 @@ pipeline {
                 }
             }
         }
+        stage("resource compile") {
+            steps {
+                script {
+                    def config = libraryResource("config/build.json")
+                    echo(config)
+                }
+            }
+        }
         stage("person") {
             steps {
                 script {
