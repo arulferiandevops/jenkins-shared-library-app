@@ -10,6 +10,16 @@ pipeline {
                 }
             }
         }
+        stage("person") {
+            steps {
+                script {
+                    hello.person([
+                        firstName: "arul",
+                        lastName: "a"
+                    ])
+                }
+            }
+        }
         stage("hello") {
             steps {
                 script {
